@@ -1,31 +1,101 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="@color/corFundo"
-    android:padding="16dp">
+    android:background="@color/corFundo">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/marketplace_titulo"
-        android:textStyle="bold"
-        android:textSize="22sp"
-        android:textColor="@color/corTextoPrimario" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="12dp"
-        android:text="@string/marketplace_subtitulo"
-        android:textColor="@color/corTextoSecundario" />
-
-    <ListView
-        android:id="@+id/listPsicologos"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:divider="@color/corTextoSecundario"
-        android:dividerHeight="1dp" />
+        android:layout_above="@id/bottomNav"
+        android:orientation="vertical"
+        android:padding="16dp">
 
-</LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/marketplace_titulo"
+            android:textStyle="bold"
+            android:textSize="22sp"
+            android:textColor="@color/corTextoPrimario" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:text="@string/marketplace_subtitulo"
+            android:textColor="@color/corTextoSecundario" />
+
+        <ListView
+            android:id="@+id/listPsicologos"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@color/corTextoSecundario"
+            android:dividerHeight="1dp" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_above="@id/bottomNav"
+        android:background="@color/corDivisor" />
+
+    <LinearLayout
+        android:id="@+id/bottomNav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:background="@color/corFundo"
+        android:paddingTop="6dp"
+        android:paddingBottom="6dp">
+
+        <Button
+            android:id="@+id/btnNavBuscar"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textAllCaps="false"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimary"
+            android:text="@string/nav_buscar" />
+
+        <Button
+            android:id="@+id/btnNavAgendamentos"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textAllCaps="false"
+            android:textSize="12sp"
+            android:textColor="@color/corTextoSecundario"
+            android:text="@string/nav_agendamentos" />
+
+        <Button
+            android:id="@+id/btnNavCarteira"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textAllCaps="false"
+            android:textSize="12sp"
+            android:textColor="@color/corTextoSecundario"
+            android:text="@string/nav_carteira" />
+
+        <Button
+            android:id="@+id/btnNavPerfil"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textAllCaps="false"
+            android:textSize="12sp"
+            android:textColor="@color/corTextoSecundario"
+            android:text="@string/nav_perfil" />
+
+    </LinearLayout>
+
+</RelativeLayout>

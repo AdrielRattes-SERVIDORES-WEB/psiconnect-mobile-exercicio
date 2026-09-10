@@ -6,4 +6,5 @@
     <color name="corTextoPrimario">#212121</color>
     <color name="corTextoSecundario">#757575</color>
     <color name="corFundo">#FFFFFF</color>
+    <color name="corDivisor">#E0E0E0</color>
 </resources>

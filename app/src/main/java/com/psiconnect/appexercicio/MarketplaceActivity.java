@@ -6,8 +6,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -57,6 +59,17 @@ public class MarketplaceActivity extends AppCompatActivity {
             intent.putExtra("preco", precos[position]);
             startActivity(intent);
         });
+
+        Button btnNavAgendamentos = findViewById(R.id.btnNavAgendamentos);
+        Button btnNavCarteira = findViewById(R.id.btnNavCarteira);
+        Button btnNavPerfil = findViewById(R.id.btnNavPerfil);
+
+        View.OnClickListener emBreve = v ->
+                Toast.makeText(this, R.string.nav_em_breve, Toast.LENGTH_SHORT).show();
+
+        btnNavAgendamentos.setOnClickListener(emBreve);
+        btnNavCarteira.setOnClickListener(emBreve);
+        btnNavPerfil.setOnClickListener(emBreve);
     }
 
     private class PsicologoAdapter extends ArrayAdapter<String> {

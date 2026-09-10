@@ -6,6 +6,13 @@
     <string name="marketplace_titulo">Encontrar Psicólogo</string>
     <string name="marketplace_subtitulo">Escolha o profissional ideal pra você</string>
 
+    <!-- Menu de navegação fixo -->
+    <string name="nav_buscar">Buscar</string>
+    <string name="nav_agendamentos">Agendamentos</string>
+    <string name="nav_carteira">Carteira</string>
+    <string name="nav_perfil">Perfil</string>
+    <string name="nav_em_breve">Em breve</string>
+
     <!-- Tela 2: Médico -->
     <string name="medico_quem_sou_eu">Quem sou eu</string>
     <string name="medico_descricao_padrao">Especialista com experiência ajudando pacientes a lidar com suas questões emocionais.</string>
